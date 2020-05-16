@@ -1,5 +1,5 @@
 const assert = require('assert');
-const BankAccount = require('../BankAccount');
+const Cuenta = require('../BankAccount');
 
 
 describe('Bank', ()=>{
@@ -91,10 +91,16 @@ describe('Bank', ()=>{
         let historia4 = [{cantidad: 10.0, tipo: "Abono"},{cantidad: 70.5, tipo: "Retiro"}];
         let cuenta4 = new Cuenta(saldo4,historia4); 
 
+     
+
+
         //SUBPRUEBA 1
-        it('Une la cuenta ‘account’ con la cuenta (original). \nAl unir se copian sus historiales y si el saldo de ‘account’ \nes positivo entonces se agrega a ‘original’ si el saldo es negativo entonces se resta a ‘origina',()=>{
-            assert.deepEqual( cuenta1.merge(cuenta2) )
-        })
+        console.log("Une la cuenta ‘account’ con la cuenta (original). \nAl unir se copian sus historiales y si el saldo de ‘account’ \nes positivo entonces se agrega a ‘original’ si el saldo es negativo entonces se resta a ‘origina");
+       //original y mergarle => otro
+       it("",()=>{
+        cuenta1.merge(cuenta2)
+       }) 
+
         it('merge con saldos normales',()=>{
             assert.deepEqual( cuenta1.current(), 1000.33);
          })
@@ -105,9 +111,10 @@ describe('Bank', ()=>{
          })
 
          //SUBPRUEBA2
-        it('Numeros negativos',()=>{
-            assert.deepEqual( cuenta4.merge(cuenta3) )
-        })
+        console.log("Numeros negativos");
+       it("", ()=>{
+        cuenta4.merge(cuenta3)
+       })
         it('merge con saldo negativo', ()=>{
             cuenta4.current(),  500.0
          })
@@ -119,13 +126,20 @@ describe('Bank', ()=>{
 
     })
 
-
+//Todo menos las FUNCIONES de bankAccount
     describe('#Historial',()=>{
         let saldo = 1000.50;
+<<<<<<< HEAD
+        let movimiento1 = {cantidad: 80, tipo: "Abono"};
+        let movimiento2 = {cantidad: 150, tipo: "Retiro"};
+        let movimiento3 = {cantidad: 700, tipo: "Retiro"};
+        let movimiento4 = {cantidad: 80, tipo: "Retiro"};
+=======
         let movimiento1 = [{cantidad: 80, tipo: "Abono"}];
         let movimiento2 = [{cantidad: 150, tipo: "Retiro"}];
         let movimiento3 = [{cantidad: 700, tipo: "Retiro"}];
         let movimiento4 = [{cantidad: 80, tipo: "Retiro"}];
+>>>>>>> 382a04ed4af205a13e402051a99aca0187aec3b0
 
         let historia = [movimiento1,movimiento2,movimiento3,movimiento4];
         let cuenta = new Cuenta(saldo,historia); 
