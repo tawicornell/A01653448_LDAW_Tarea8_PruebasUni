@@ -124,8 +124,8 @@ describe('Bank', ()=>{
         let saldo = 1000.50;
         let movimiento1 = [{cantidad: 80, tipo: "Abono"}];
         let movimiento2 = [{cantidad: 150, tipo: "Retiro"}];
-        let movimiento2 = [{cantidad: 700, tipo: "Retiro"}];
-        let movimiento2 = [{cantidad: 80, tipo: "Retiro"}];
+        let movimiento3 = [{cantidad: 700, tipo: "Retiro"}];
+        let movimiento4 = [{cantidad: 80, tipo: "Retiro"}];
 
         let historia = [movimiento1,movimiento2,movimiento3,movimiento4];
         let cuenta = new Cuenta(saldo,historia); 
